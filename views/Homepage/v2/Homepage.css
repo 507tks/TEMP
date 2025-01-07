@@ -1,0 +1,780 @@
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: white;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-wideScreen {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-icons {
+  font-size: 2rem;
+  color: black;
+  margin-left: 2rem;
+}
+
+.sidebar-menu {
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: auto;
+  display: flex;
+  position: fixed;
+  transition: 850ms;
+  justify-content: center;
+  background-color: #ffffff !important;
+  z-index: 100;
+}
+
+.sidebar-menu.active {
+  left: 0;
+  transition: 450ms;
+}
+
+.list-items {
+  height: 60px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: start;
+  padding: 8px 0px 8px 16px;
+}
+
+.list-items a {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  font-size: 18px;
+  padding: 0 16px;
+  color: #0e0e0e;
+  border-radius: 4px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.list-items a:hover {
+  background-color: #e4e3e2 !important;
+}
+
+.sidebar-menu-items {
+  width: 100%;
+}
+
+.sidebar-toggle {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #fbf9f9;
+}
+
+.custom-span {
+  margin-left: 16px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  background: transparent;
+}
+
+.nav-links li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+
+.nav-links li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+img {
+  height: 100px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght,GRAD@300..700,-30..0&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght,GRAD@300..700,-30..0&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght,GRAD@300..700,-30..0&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+  width: 100vw;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  min-width: 100vw;
+}
+
+/* Hero section css */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #f2f5f6, #ffffff);
+}
+
+.hero-content {
+  text-align: left;
+  margin-left: 150px;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  color: #373737;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 90px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-family: "Signika", sans-serif;
+  font-weight: 300;
+  color: #373737;
+  font-size: 30px;
+  margin-bottom: 1vh;
+}
+
+.hero-content .description {
+  font-size: 20px;
+  margin-bottom: 2vh;
+}
+
+.book-demo {
+  background-color: #3b97dc;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-demo:hover {
+  background-color: #2a6d9a;
+  transform: scale(1.05);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 150px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image img {
+  width: 90%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  box-shadow: 0 0 10px rgba(228, 242, 253, 0.993);
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; /* Add padding for better spacing */
+  }
+
+  .hero-content {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 60px; /* Adjust heading size for tablets */
+  }
+
+  .hero-content p {
+    font-size: 24px; /* Slightly smaller text */
+  }
+
+  .book-demo {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+
+  .hero-image {
+    margin: 0;
+  }
+
+  .hero-image img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 48px; /* Smaller heading for phones */
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .hero-content .description {
+    font-size: 16px;
+  }
+
+  .book-demo {
+    width: 100%; /* Full width button for mobile */
+    max-width: 300px;
+  }
+
+  .hero-image img {
+    width: 100%; /* Ensure the image fits the screen */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-content .description {
+    font-size: 14px;
+  }
+
+  .book-demo {
+    font-size: 18px;
+  }
+}
+
+/* Services Section */
+/* Services Section */
+.services {
+  margin: 0;
+  min-height: 50vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #fff);
+}
+
+.services-heading h1 {
+  padding-top: 20px;
+  font-size: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+  color: #333;
+  text-align: center;
+}
+
+/* Content Grid */
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding-top: 30px;
+  width: 100%;
+  justify-items: center;
+}
+
+/* List Items */
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.services-list li:hover {
+  background-color: #e9f7ef;
+  transform: scale(1.05);
+}
+
+.custom-span {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* Image Styling */
+.services-image {
+  width: 100%; /* Ensure the container takes full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.services-image img {
+  max-width: 90%; /* Image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.services-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .services-content {
+    grid-template-columns: 1fr;
+  }
+
+  .services-heading h1 {
+    font-size: 32px;
+  }
+
+  .services-list li {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 15px;
+  }
+
+  .services-heading h1 {
+    font-size: 28px;
+  }
+
+  .services-list li {
+    font-size: 14px;
+  }
+
+  .custom-span {
+    font-size: 20px;
+  }
+
+  /* Ensure Image is Visible on Small Screens */
+  .services-image {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .services-image img {
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Limit size for better fit */
+    height: auto;
+  }
+}
+
+/*testimonials css*/
+.testimonials {
+  text-align: center;
+  min-height: 50vh;
+  margin-top: 20px;
+}
+
+.testimonial-heading {
+  font-size: 40px;
+  top: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6e3ff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 700px) {
+  .testimonial-cards {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .testimonial-card {
+    margin-bottom: 5vh;
+    width: 70%;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .services-list {
+    text-align: center !important;
+  }
+}
+
+.testimonial-image {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.testimonial-card h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  color: #00796b;
+}
+
+.testimonial-card p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #333;
+  text-align: left;
+}
+
+
+/* Contact Layout */
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 20px;
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  font-family: "Signika Negative", sans-serif;
+  margin-bottom: 30px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1400px;
+  gap: 60px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Contact Info Section */
+.contact-details {
+  flex: 1;
+  text-align: left;
+  padding-top: 5px;
+  margin-right: 50px;
+}
+
+.contact-details p {
+  font-size: 1.2rem;
+  margin-left: 30px;
+}
+
+.contact-image {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;  /* Limit max width for large screens */
+  height: auto;       /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover;  /* Prevent distortion */
+}
+
+/* Contact Forms */
+.contact-forms {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Form Group Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align labels to the left */
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9e9ff;
+}
+
+/* Error Styling */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Button Styling */
+.contact-form button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fddc5c;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #fcbf49;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Adjust gap for smaller screens */
+  }
+
+  .contact-details,
+  .contact-forms {
+    width: 100%;
+    text-align: center;
+    margin-right: 0; /* Remove extra margin */
+  }
+
+  .contact-image {
+    width: 80%; /* Adjust width for medium screens */
+    max-width: 300px;
+    margin: 0 auto; /* Center image */
+  }
+
+  .contact-form {
+    width: 90%; /* Form width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+
+  .contact-details p {
+    font-size: 1rem;
+    margin-left: 0; /* Center-align text on small screens */
+  }
+
+  .contact-image {
+    width: 90%; /* Full width on very small screens */
+    max-width: none;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+
+/* Footer Section */
+.footer {
+  border-top: 1px solid #ddd;
+  width: 100%;
+  min-height: 35vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f9e9ff;
+  border-radius: 100px 100px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+@media (max-width: 1200px) {
+  .logo-text h1 {
+    font-size: 2rem !important;
+  }
+
+  .logo-text p {
+    font-size: 0.5rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo-text h1 {
+    font-size: 2rem !important;
+  }
+
+  .logo-text p {
+    font-size: 0.5rem !important;
+  }
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin: 0%;
+  width: 35%;
+}
+
+.logo-image {
+  width: 30%;
+  height: auto;
+}
+
+.logo-text h1 {
+  color: #373737;
+  font-size: 4rem;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Signika", sans-serif;
+  font-weight: 400;
+  color: #373737;
+  font-style: normal;
+}
+
+.social-section {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.powered-by-section {
+  text-align: center;
+}
+
+.powered-by-section p {
+  font-size: xx-large;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
